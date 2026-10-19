@@ -1,0 +1,52 @@
+{
+  "result": "PASS",
+  "url": "https://potigy.com.br",
+  "results": [
+    {
+      "path": "/login",
+      "lang": "pt-BR",
+      "status": 200,
+      "brand": true,
+      "mascot": false
+    },
+    {
+      "path": "/login",
+      "lang": "en",
+      "status": 200,
+      "brand": true,
+      "mascot": false
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/.within.website/x/xess/xess.min.css",
+      "status": 200
+    },
+    {
+      "path": "/.within.website/x/cmd/anubis/static/js/main.mjs",
+      "status": 200
+    },
+    {
+      "path": "/app",
+      "status": 200
+    },
+    {
+      "path": "/api/potigy/health",
+      "status": 200
+    },
+    {
+      "lang": "pt-BR",
+      "realChallenge": true,
+      "authCookie": true,
+      "pageErrors": []
+    },
+    {
+      "lang": "en",
+      "realChallenge": true,
+      "authCookie": true,
+      "pageErrors": []
+    }
+  ]
+}

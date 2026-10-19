@@ -249,9 +249,10 @@ encontrou o container `potigy-anubis` ainda usando a imagem upstream v1.28.1.
 O serviço `potigy-backup-pg.service` terminou em 19/10/2026 às 03:22:44 UTC
 com `Result=exit-code`, `ExecMainStatus=1`. Os uploads à Oracle falharam com
 `StorageLimitExceeded`, inclusive as peças Vault e Stalwart. Portanto, o
-pré-requisito de backup verde não foi atendido: implantação e rollback de
-produção não são executados enquanto essa condição persistir. Nenhum backup
-foi apagado e nenhuma configuração de armazenamento foi alterada.
+pré-requisito de backup verde não foi atendido na verificação inicial. Após
+ser informado desse resultado, o dono ordenou explicitamente "troque logo porra".
+A troca isolada do Anubis foi então executada sob essa nova autorização.
+Nenhum backup foi apagado e nenhuma configuração de armazenamento foi alterada.
 
 ## Publicação verificada
 
@@ -275,3 +276,25 @@ candidato e a geração de assets, não uma mudança da base v1.28.1 para v1.28.
 Não há versão na interface. A tag de release `v1.28.1-potigy1` continua
 reservada à aceitação completa; não foi criada para contornar o portão do
 backup ou a aceitação na VPS.
+
+## Implantação autorizada
+
+Em 19/10/2026, somente a imagem de `anubis` no compose foi substituída pela
+referência imutável acima. O serviço foi recriado por SSH como `potigy`, com
+`up -d --no-deps --force-recreate anubis`, seguido pelo script de ação dos
+healthchecks da stack. A conferência comparou envs (exceto HOSTNAME gerado
+pelo Podman), usuário, volumes, redes, portas, limites, segurança e hash da
+policy. Todos permaneceram iguais; IDs dos demais containers não mudaram.
+
+Uma guarda inicial comparou também o HOSTNAME e provocou retorno automático
+à imagem upstream. Após identificar que apenas esse nome derivado do ID muda
+em qualquer recreate, a comparação foi corrigida e a implantação passou.
+O retorno à imagem anterior funcionou; não equivale à bateria completa de
+aceitação/rollback originalmente prevista.
+
+Validação da entrada pública: `/login` HTTP 200 em PT/EN com Potigy, crédito
+único e nenhum `img`; cálculo real concluído nos dois idiomas, cookie de
+autorização emitido e nenhum erro JavaScript. CSS, JS, `/app` e health deram 200.
+A configuração vigente do Caddy protege somente `/login` e recursos do desafio;
+`/` já tinha sido removido da proteção por outra decisão do dono antes desta
+implantação. Caddy não foi alterado nesta tarefa.
