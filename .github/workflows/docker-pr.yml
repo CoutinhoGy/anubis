@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   ko_pr:
+    # The upstream PR job publishes to a registry too; keep it off in this fork.
+    if: github.repository == 'TecharoHQ/anubis'
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout code

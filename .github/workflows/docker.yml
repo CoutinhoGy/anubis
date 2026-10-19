@@ -18,6 +18,8 @@ permissions:
 
 jobs:
   ko_prod:
+    # Fork publication requires an explicit owner instruction and registry choice.
+    if: github.repository == 'TecharoHQ/anubis'
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout code

@@ -1,0 +1,82 @@
+{
+  "result": "PASS",
+  "scope": "isolated local processes; same routing and production rules; temporary bbolt paths; no VPS/container deployment",
+  "results": [
+    {
+      "name": "HTTP /",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "HTTP /login",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "HTTP /.within.website/x/xess/xess.min.css",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "HTTP /.within.website/x/cmd/anubis/static/js/main.mjs",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "HTTP /app",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "HTTP /api/potigy/health",
+      "status": 200,
+      "upstream": 200
+    },
+    {
+      "name": "Googlebot verified range",
+      "pass": true
+    },
+    {
+      "name": "Real challenge pt-BR",
+      "pass": true
+    },
+    {
+      "name": "Error page pt-BR",
+      "status": 400,
+      "pass": true
+    },
+    {
+      "name": "Real challenge en",
+      "pass": true
+    },
+    {
+      "name": "Error page en",
+      "status": 400,
+      "pass": true
+    },
+    {
+      "name": "Keyboard continuation and reduced motion",
+      "pass": true,
+      "height": 49.59375,
+      "outline": "solid"
+    },
+    {
+      "name": "dark",
+      "width": 1280,
+      "scroll": 1280,
+      "background": "rgb(15, 36, 26)",
+      "text": "rgb(235, 235, 235)"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "scroll": 390,
+      "background": "rgb(246, 246, 242)",
+      "text": "rgb(26, 47, 38)"
+    },
+    {
+      "name": "Local upstream rollback replay",
+      "pass": true
+    }
+  ]
+}
