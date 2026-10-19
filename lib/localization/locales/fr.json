@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "En-têtes X-Forwarded-* manquants. Si l’accès échoue encore, envoyez ces détails à l’administration du site.",
   "simplified_explanation": "Potigy utilise Anubis pour limiter les requêtes automatisées. Votre navigateur effectue un calcul avant l’accès. La barre estime la progression à partir des tentatives de calcul ; elle ne mesure pas le travail restant. Gardez cette page ouverte.",
   "script_load_error": "Le calcul d’accès n’a pas abouti. Rechargez pour réessayer. Si l’erreur se reproduit, envoyez ses détails à l’administration du site.",
-  "potigy_credit": "Protégé pour Potigy · Défi par Anubis, de Techaro",
   "error_next_action": "Si l’accès échoue encore, envoyez ces détails à l’administration du site.",
   "imprint_label": "Informations du site",
   "benchmark_average": "Vitesse :",
   "benchmark_running": "Potigy · Test de calcul Anubis",
   "benchmark_change": "Comparer :",
-  "benchmark_failure": "Le calcul d’accès n’a pas abouti. Rechargez pour réessayer. Si l’erreur se reproduit, envoyez ses détails à l’administration du site."
+  "benchmark_failure": "Le calcul d’accès n’a pas abouti. Rechargez pour réessayer. Si l’erreur se reproduit, envoyez ses détails à l’administration du site.",
+  "developed_by": "Développé par",
+  "credit_and": "et"
 }

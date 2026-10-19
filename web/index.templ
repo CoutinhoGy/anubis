@@ -50,20 +50,13 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 				@body
 				<footer>
 					<div class="centered-div">
-						<p>
-							{ localizer.T("protected_by") } <a href="https://github.com/TecharoHQ/anubis">Anubis</a> { localizer.T("protected_from") } <a
-	href="https://techaro.lol"
->Techaro</a>. { localizer.T("made_with") }.
-						</p>
-						<p>{ localizer.T("mascot_design") } <a href="https://bsky.app/profile/celphase.bsky.social">{ localizer.T("celphase") }</a>.</p>
-						<p class="potigy-credit">{ localizer.T("potigy_credit") }</p>
+						<p class="credits">{ localizer.T("developed_by") } <a href="https://techaro.lol">Techaro</a> { localizer.T("credit_and") } <a href="https://bsky.app/profile/celphase.bsky.social">CELPHASE</a></p>
 						if impressum != nil {
 							<p>
 								@templ.Raw(impressum.Footer)
 								<a href={ templ.SafeURL(anubis.BasePrefix + fmt.Sprintf("%simprint", anubis.APIPrefix)) }>{ localizer.T("imprint_label") }</a>
 							</p>
 						}
-						<p>{ localizer.T("version_info") } <code>{ anubis.Version }</code>.</p>
 					</div>
 				</footer>
 			</main>
@@ -73,7 +66,7 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 
 templ errorPage(message, mail, code string, localizer *localization.SimpleLocalizer) {
 	<div class="centered-div challenge-content">
-		<img id="image" alt="Anubis · CELPHASE" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/reject.webp?cacheBuster=" + anubis.Version }/>
+		<span id="image" hidden aria-hidden="true"></span>
 		<p>{ message }.</p>
 		<p>{ localizer.T("error_next_action") }</p>
 		if code != "" {
@@ -94,12 +87,7 @@ templ errorPage(message, mail, code string, localizer *localization.SimpleLocali
 
 templ StaticHappy(localizer *localization.SimpleLocalizer) {
 	<div class="centered-div">
-		<img
-			style="display:none;"
-			style="width:100%;max-width:256px;"
-			src={ "/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=" +
-    anubis.Version }
-		/>
+
 		<p>{ localizer.T("static_check_endpoint") }</p>
 	</div>
 }
@@ -133,7 +121,7 @@ templ bench(localizer *localization.SimpleLocalizer) {
 			></tbody>
 		</table>
 		<div class="centered-div">
-			<img id="image" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version }/>
+			<span id="image" hidden aria-hidden="true"></span>
 			<p id="status" aria-live="polite" aria-atomic="true" style="max-width:256px">{ localizer.T("loading") }</p>
 			<script async type="module" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/bench.mjs?cacheBuster=" + anubis.Version }></script>
 			<div id="sparkline"></div>

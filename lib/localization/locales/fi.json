@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Puuttuvat vaaditut X-Forwarded-* otsikot. Jos pääsy ei vieläkään onnistu, lähetä nämä virhetiedot ylläpidolle.",
   "simplified_explanation": "Potigy rajoittaa automatisoituja pyyntöjä Anubisin avulla. Selain suorittaa laskentatehtävän ennen pääsyä. Palkki arvioi etenemistä laskentayrityksistä; se ei mittaa jäljellä olevaa työtä. Pidä sivu auki.",
   "script_load_error": "Laskentatehtävä ei valmistunut. Yritä uudelleen lataamalla sivu. Jos virhe toistuu, lähetä virhetiedot ylläpidolle.",
-  "potigy_credit": "Suojattu Potigylle · Anubis-tarkistus Techarolta",
   "error_next_action": "Jos pääsy ei vieläkään onnistu, lähetä nämä virhetiedot ylläpidolle.",
   "imprint_label": "Sivuston tiedot",
   "benchmark_average": "Nopeus:",
   "benchmark_running": "Potigy · Anubis-laskentatesti",
   "benchmark_change": "Vertailu:",
-  "benchmark_failure": "Laskentatehtävä ei valmistunut. Yritä uudelleen lataamalla sivu. Jos virhe toistuu, lähetä virhetiedot ylläpidolle."
+  "benchmark_failure": "Laskentatehtävä ei valmistunut. Yritä uudelleen lataamalla sivu. Jos virhe toistuu, lähetä virhetiedot ylläpidolle.",
+  "developed_by": "Kehittäjät",
+  "credit_and": "ja"
 }

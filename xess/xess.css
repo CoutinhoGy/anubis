@@ -97,14 +97,7 @@ h1 { font-size: clamp(1.75rem, 4.5vw, 2.75rem); margin: 0 0 1.75rem; max-width: 
 p { margin: 0 0 1rem; overflow-wrap: anywhere; }
 .centered-div { text-align: start; }
 .challenge-content { max-width: 40rem; }
-#image {
-  position: absolute;
-  right: 0;
-  bottom: 0.25rem;
-  width: 28px !important;
-  max-width: 28px !important;
-  height: auto;
-}
+
 #status { font-variant-numeric: tabular-nums; min-height: 3.25rem; }
 #progress {
   display: none;
@@ -132,9 +125,8 @@ input, select, button { min-height: 44px; font-family: var(--body-sans-font); }
 pre, code { font-family: var(--body-preformatted-font); }
 pre { background: var(--preformatted-background); padding: 1rem; overflow: auto; max-width: 100%; font-size: 0.8rem; }
 blockquote { border-left: 2px solid var(--line); margin: 1rem 0; padding-left: 1rem; }
-footer { margin-top: 2rem; border-top: 1px solid var(--line); padding: 1rem 2.75rem 0 0; color: var(--secondary-text); font-size: 0.75rem; }
+footer { margin-top: 2rem; border-top: 1px solid var(--line); padding: 1rem 0 0; color: var(--secondary-text); font-size: 0.75rem; }
 footer p { margin: 0; }
-footer .potigy-credit { font-size: 0.6875rem; margin: 0.25rem 0 0.5rem; }
 ::selection { background: var(--potigy-gold); color: var(--potigy-on-gold); }
 @media (prefers-reduced-motion: no-preference) {
   .bar-inner { transition: width 0.25s cubic-bezier(.16, 1, .3, 1); }

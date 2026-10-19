@@ -71,7 +71,7 @@ const App = () => {
   return (
     <>
       {imageURL !== null && (
-        <img id="image" alt="Anubis · CELPHASE" src={imageURL} style={{ width: "100%", maxWidth: "256px" }} />
+        <span id="image" hidden aria-hidden="true"></span>
       )}
       {state !== undefined && (
         <>

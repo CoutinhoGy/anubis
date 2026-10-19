@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy nije mogao otvoriti ovu stranicu",
   "js_calculation_error_msg": "Izračun za pristup nije dovršen. Ponovno učitajte stranicu. Ako se pogreška ponovi, pošaljite detalje administratoru.",
   "script_load_error": "Izračun za pristup nije dovršen. Ponovno učitajte stranicu. Ako se pogreška ponovi, pošaljite detalje administratoru.",
-  "potigy_credit": "Zaštićeno za Potigy · Provjera putem Anubisa tvrtke Techaro",
   "error_next_action": "Ako pristup i dalje ne uspijeva, pošaljite ove detalje administratoru.",
   "imprint_label": "Informacije o stranici",
   "benchmark_average": "Brzina:",
   "benchmark_running": "Potigy · Anubisov test izračuna",
   "benchmark_change": "Usporedi:",
-  "benchmark_failure": "Izračun za pristup nije dovršen. Ponovno učitajte stranicu. Ako se pogreška ponovi, pošaljite detalje administratoru."
+  "benchmark_failure": "Izračun za pristup nije dovršen. Ponovno učitajte stranicu. Ako se pogreška ponovi, pošaljite detalje administratoru.",
+  "developed_by": "Razvili",
+  "credit_and": "i"
 }

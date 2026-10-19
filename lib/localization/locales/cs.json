@@ -61,11 +61,12 @@
   "js_calculation_error_msg": "Výpočet pro přístup se nedokončil. Načtěte stránku znovu. Pokud chyba přetrvá, pošlete její podrobnosti správci webu.",
   "missing_required_forwarded_headers": "Chybějící požadované hlavičky X-Forwarded-*. Pokud přístup stále selhává, pošlete tyto podrobnosti správci webu.",
   "script_load_error": "Výpočet pro přístup se nedokončil. Načtěte stránku znovu. Pokud chyba přetrvá, pošlete její podrobnosti správci webu.",
-  "potigy_credit": "Chráněno pro Potigy · Ověření pomocí Anubisu od Techaro",
   "error_next_action": "Pokud přístup stále selhává, pošlete tyto podrobnosti správci webu.",
   "imprint_label": "Informace o webu",
   "benchmark_average": "Rychlost:",
   "benchmark_running": "Potigy · Výpočetní test Anubisu",
   "benchmark_change": "Porovnat:",
-  "benchmark_failure": "Výpočet pro přístup se nedokončil. Načtěte stránku znovu. Pokud chyba přetrvá, pošlete její podrobnosti správci webu."
+  "benchmark_failure": "Výpočet pro přístup se nedokončil. Načtěte stránku znovu. Pokud chyba přetrvá, pošlete její podrobnosti správci webu.",
+  "developed_by": "Vyvinuli",
+  "credit_and": "a"
 }

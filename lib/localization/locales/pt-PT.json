@@ -61,11 +61,12 @@
   "js_calculation_error": "A Potigy não conseguiu abrir esta página",
   "js_calculation_error_msg": "O cálculo de acesso não terminou. Volte a carregar esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site.",
   "script_load_error": "O cálculo de acesso não terminou. Volte a carregar esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site.",
-  "potigy_credit": "Protegido para a Potigy · Desafio por Anubis, de Techaro",
   "error_next_action": "Se o acesso continuar falhando, envie estes detalhes do erro à administração do site.",
   "imprint_label": "Informações do site",
   "benchmark_average": "Velocidade:",
   "benchmark_running": "Potigy · Teste de cálculo do Anubis",
   "benchmark_change": "Comparar:",
-  "benchmark_failure": "O cálculo de acesso não terminou. Volte a carregar esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site."
+  "benchmark_failure": "O cálculo de acesso não terminou. Volte a carregar esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site.",
+  "developed_by": "Desenvolvido por",
+  "credit_and": "e"
 }

@@ -1,1 +1,3 @@
 **/*_templ.go linguist-generated=true
+
+scripts/reatualizar-anubis.sh text eol=lf

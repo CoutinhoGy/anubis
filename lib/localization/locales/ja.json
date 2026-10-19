@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "必要な X-Forwarded-* ヘッダーがありません. アクセスできない状態が続く場合は、このエラーの詳細をサイト管理者に送ってください。",
   "simplified_explanation": "PotigyはAnubisを使って自動化されたリクエストを制限しています。アクセス前にブラウザーが計算を行います。バーは計算の試行回数から進み具合を推定するもので、残りの作業量を示すものではありません。このページを開いたままにしてください。",
   "script_load_error": "アクセス用の計算を完了できませんでした。再読み込みしてお試しください。繰り返し失敗する場合は、エラーの詳細をサイト管理者に送ってください。",
-  "potigy_credit": "Potigy向けの保護 · TecharoのAnubisによる確認",
   "error_next_action": "アクセスできない状態が続く場合は、このエラーの詳細をサイト管理者に送ってください。",
   "imprint_label": "サイト情報",
   "benchmark_average": "速度:",
   "benchmark_running": "Potigy · Anubis計算テスト",
   "benchmark_change": "比較:",
-  "benchmark_failure": "アクセス用の計算を完了できませんでした。再読み込みしてお試しください。繰り返し失敗する場合は、エラーの詳細をサイト管理者に送ってください。"
+  "benchmark_failure": "アクセス用の計算を完了できませんでした。再読み込みしてお試しください。繰り返し失敗する場合は、エラーの詳細をサイト管理者に送ってください。",
+  "developed_by": "開発：",
+  "credit_and": "・"
 }

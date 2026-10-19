@@ -71,12 +71,13 @@ para código, sempre com fallback do sistema e sem requisição a webfont extern
 
 ## Invariantes
 
-- Techaro e CELPHASE continuam visíveis. A linha Potigy fica imediatamente
-  abaixo dos créditos originais e em tamanho menor.
-- Mascotes originais conservam nomes, dimensões, bytes e atribuição.
-  Por orientação do dono durante a implementação, sua exibição fica restrita
-  a 28px no canto do rodapé. O lockup Potigy é o foco da página. A limitação
-  vale também para a imagem recriada pelo desafio Preact e é medida no navegador.
+- Por instrução posterior do dono, o rodapé contém somente uma linha:
+  “Desenvolvido por Techaro e CELPHASE”, com os dois links. A frase é localizada
+  nos 29 idiomas. Não há versão, país, crédito Potigy extra ou mascote na interface.
+- Os arquivos originais dos mascotes conservam seus bytes e atribuição no
+  código-fonte, mas nenhuma imagem é renderizada ou carregada pela interface.
+  O lockup Potigy é o foco. Um span oculto mantém o ponto de apresentação
+  #image esperado pelo JS upstream, sem imagem ou requisição de rede.
 - A barra upstream é uma estimativa probabilística derivada de tentativas
   reais, não uma fração mensurável de conclusão. Sua fórmula permanece intacta;
   a explicação deixa isso explícito e não promete prazo.
@@ -96,14 +97,15 @@ ser declarados após execução real; não há digest reservado ou inventado.
 ## Onde editar e como construir
 
 Os textos ficam em `lib/localization/locales/<idioma>.json`. Os 29 catálogos
-possuem as mesmas chaves, incluindo `potigy_credit`, `error_next_action`,
+possuem as mesmas chaves, incluindo `developed_by`, `credit_and`, `error_next_action`,
 `imprint_label` e os rótulos do benchmark. Nomes próprios, créditos e rótulos
 técnicos corretos são mantidos; as mensagens de acesso explicam a computação
 e a próxima ação. Diagnósticos originais continuam disponíveis.
 
 A apresentação comum está em `web/index.templ` e `xess/xess.css`.
-O lockup usa as coordenadas do símbolo existente Potigy; o mascote original
-fica no canto do rodapé a 28px. Não há substituição de arte CELPHASE.
+O lockup usa as coordenadas do símbolo existente Potigy. As imagens CELPHASE
+não são exibidas. O rodapé contém somente o crédito de desenvolvimento dos
+dois autores, com links, sem país ou versão.
 As quatro fontes WOFF2 locais estão em `xess/static/potigy/`, com as três
 licenças OFL originais ao lado. O postcss upstream incorpora as fontes no CSS;
 `font-display: swap` e os fallbacks permitem a primeira pintura sem aguardar fonte.
@@ -144,8 +146,8 @@ são temporários. Os cookies Secure/Partitioned são desligados **somente nos d
 processos de prova sobre HTTP local**; configuração e defaults de produção não mudam.
 
 Evidências são gravadas em `var/branding-evidence/`: capturas PT/EN, mobile,
-tema escuro, movimento reduzido, logs e `results.json`. O teste mede o mascote
-em até 28px, completa o desafio de verdade nos dois idiomas, abre a explicação
+tema escuro, movimento reduzido, logs e `results.json`. O teste exige zero elementos de imagem
+e uma única linha de crédito, completa o desafio de verdade nos dois idiomas, abre a explicação
 com Tab/Enter e aciona o botão de continuação exclusivamente por teclado.
 Googlebot é testado com UA e endereço da faixa curada; apenas falsificar o UA
 não satisfaz a regra upstream. O replay do binário oficial prova o retorno
@@ -203,3 +205,7 @@ preservando user/userns/volumes/envs/POLICY_FNAME e sem porta pública nova.
 Repetir a bateria pela entrada pública e guardar as provas. Reverter é restaurar
 a referência anterior da imagem upstream, recriar somente Anubis com `--no-deps`
 e repetir a bateria. Esse rollback de produção permanece pendente.
+
+A resposta HTTP textual `authorization_required` permanece literalmente igual
+ao upstream em todos os idiomas, por ser parte da resposta de API, e não do
+rodapé/página do desafio. O verificador compara esse valor com a tag original.

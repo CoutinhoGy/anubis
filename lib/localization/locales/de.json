@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy konnte diese Seite nicht öffnen",
   "js_calculation_error_msg": "Die Zugangsberechnung konnte nicht abgeschlossen werden. Laden Sie neu. Bei erneutem Fehler senden Sie die Fehlerdetails an die Website-Verwaltung.",
   "script_load_error": "Die Zugangsberechnung konnte nicht abgeschlossen werden. Laden Sie neu. Bei erneutem Fehler senden Sie die Fehlerdetails an die Website-Verwaltung.",
-  "potigy_credit": "Geschützt für Potigy · Prüfung durch Anubis von Techaro",
   "error_next_action": "Bei weiteren Zugangsproblemen senden Sie diese Fehlerdetails an die Website-Verwaltung.",
   "imprint_label": "Website-Informationen",
   "benchmark_average": "Geschwindigkeit:",
   "benchmark_running": "Potigy · Anubis-Rechentest",
   "benchmark_change": "Vergleichen:",
-  "benchmark_failure": "Die Zugangsberechnung konnte nicht abgeschlossen werden. Laden Sie neu. Bei erneutem Fehler senden Sie die Fehlerdetails an die Website-Verwaltung."
+  "benchmark_failure": "Die Zugangsberechnung konnte nicht abgeschlossen werden. Laden Sie neu. Bei erneutem Fehler senden Sie die Fehlerdetails an die Website-Verwaltung.",
+  "developed_by": "Entwickelt von",
+  "credit_and": "und"
 }

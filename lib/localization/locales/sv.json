@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Saknar nödvändiga X-Forwarded-* headers. Skicka dessa feluppgifter till administratören om åtkomsten fortfarande misslyckas.",
   "simplified_explanation": "Potigy använder Anubis för att begränsa automatiserade förfrågningar. Webbläsaren gör en beräkning före åtkomst. Stapeln uppskattar förloppet utifrån beräkningsförsök; den mäter inte återstående arbete. Håll sidan öppen.",
   "script_load_error": "Åtkomstberäkningen kunde inte slutföras. Ladda om för att försöka igen. Skicka felinformationen till administratören om felet upprepas.",
-  "potigy_credit": "Skyddat för Potigy · Kontroll av Anubis från Techaro",
   "error_next_action": "Skicka dessa feluppgifter till administratören om åtkomsten fortfarande misslyckas.",
   "imprint_label": "Webbplatsinformation",
   "benchmark_average": "Hastighet:",
   "benchmark_running": "Potigy · Anubis beräkningstest",
   "benchmark_change": "Jämför:",
-  "benchmark_failure": "Åtkomstberäkningen kunde inte slutföras. Ladda om för att försöka igen. Skicka felinformationen till administratören om felet upprepas."
+  "benchmark_failure": "Åtkomstberäkningen kunde inte slutföras. Ladda om för att försöka igen. Skicka felinformationen till administratören om felet upprepas.",
+  "developed_by": "Utvecklat av",
+  "credit_and": "och"
 }

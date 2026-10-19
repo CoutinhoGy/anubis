@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy could not open this page",
   "js_calculation_error_msg": "The access calculation could not finish. Reload this page to try again. If it fails again, send the error details to the site administrator.",
   "script_load_error": "The access calculation could not finish. Reload this page to try again. If it fails again, send the error details to the site administrator.",
-  "potigy_credit": "Protected for Potigy · Challenge by Anubis from Techaro",
   "error_next_action": "If access still fails, send these error details to the site administrator.",
   "imprint_label": "Site information",
   "benchmark_average": "Speed:",
   "benchmark_running": "Potigy · Anubis calculation benchmark",
   "benchmark_change": "Compare:",
-  "benchmark_failure": "The access calculation could not finish. Reload this page to try again. If it fails again, send the error details to the site administrator."
+  "benchmark_failure": "The access calculation could not finish. Reload this page to try again. If it fails again, send the error details to the site administrator.",
+  "developed_by": "Developed by",
+  "credit_and": "and"
 }

@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Mangler nødvendige X-Forwarded-* header. Send disse feildetaljene til administratoren hvis tilgangen fortsatt feiler.",
   "simplified_explanation": "Potigy bruker Anubis for å begrense automatiserte forespørsler. Nettleseren utfører en beregning før tilgang. Linjen anslår fremdriften ut fra beregningsforsøk; den måler ikke gjenstående arbeid. Hold siden åpen.",
   "script_load_error": "Tilgangsberegningen ble ikke fullført. Last på nytt for å prøve igjen. Send feildetaljene til administratoren hvis feilen gjentar seg.",
-  "potigy_credit": "Beskyttet for Potigy · Kontroll av Anubis fra Techaro",
   "error_next_action": "Send disse feildetaljene til administratoren hvis tilgangen fortsatt feiler.",
   "imprint_label": "Nettstedsinformasjon",
   "benchmark_average": "hastighet:",
   "benchmark_running": "Potigy · Anubis-beregningstest",
   "benchmark_change": "Jevnfør:",
-  "benchmark_failure": "Tilgangsberegningen ble ikke fullført. Last på nytt for å prøve igjen. Send feildetaljene til administratoren hvis feilen gjentar seg."
+  "benchmark_failure": "Tilgangsberegningen ble ikke fullført. Last på nytt for å prøve igjen. Send feildetaljene til administratoren hvis feilen gjentar seg.",
+  "developed_by": "Utviklet av",
+  "credit_and": "og"
 }

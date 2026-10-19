@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Vantar nauðsynleg X-Forwarded-* hausar. Ef aðgangur virkar enn ekki skaltu senda þessar upplýsingar til vefstjóra.",
   "simplified_explanation": "Potigy notar Anubis til að takmarka sjálfvirkar beiðnir. Vafrinn framkvæmir útreikning áður en aðgangur er veittur. Stikan áætlar framvinduna út frá reiknitilraunum; hún mælir ekki vinnuna sem eftir er. Hafðu síðuna opna.",
   "script_load_error": "Aðgangsútreikningnum lauk ekki. Endurhladdu til að reyna aftur. Ef villan endurtekur sig skaltu senda villuupplýsingarnar til vefstjóra.",
-  "potigy_credit": "Varið fyrir Potigy · Prófun með Anubis frá Techaro",
   "error_next_action": "Ef aðgangur virkar enn ekki skaltu senda þessar upplýsingar til vefstjóra.",
   "imprint_label": "Upplýsingar um vefinn",
   "benchmark_average": "Hraði:",
   "benchmark_running": "Potigy · Reiknipróf Anubis",
   "benchmark_change": "Bera saman:",
-  "benchmark_failure": "Aðgangsútreikningnum lauk ekki. Endurhladdu til að reyna aftur. Ef villan endurtekur sig skaltu senda villuupplýsingarnar til vefstjóra."
+  "benchmark_failure": "Aðgangsútreikningnum lauk ekki. Endurhladdu til að reyna aftur. Ef villan endurtekur sig skaltu senda villuupplýsingarnar til vefstjóra.",
+  "developed_by": "Þróað af",
+  "credit_and": "og"
 }

@@ -8,8 +8,8 @@ import (
 
 templ page(localizer *localization.SimpleLocalizer) {
 	<div class="centered-div challenge-content">
-		<img id="image" alt="Anubis · CELPHASE" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version }/>
-		<img alt="" style="display:none;width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=" + anubis.Version }/>
+		<span id="image" hidden aria-hidden="true"></span>
+
 		<p id="status" aria-live="polite" aria-atomic="true">{ localizer.T("loading") }</p>
 		<p id="anubis-script-error" aria-live="polite" style="display:none;">{ localizer.T("script_load_error") }</p>
 		<script id="anubis-main" defer type="module" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/main.mjs?cacheBuster=" + anubis.Version }></script>

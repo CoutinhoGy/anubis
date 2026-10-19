@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigyk ezin izan du orri hau ireki",
   "js_calculation_error_msg": "Sarbide-kalkulua ez da amaitu. Kargatu orria berriro saiatzeko. Errorea errepikatzen bada, bidali xehetasunak administratzaileari.",
   "script_load_error": "Sarbide-kalkulua ez da amaitu. Kargatu orria berriro saiatzeko. Errorea errepikatzen bada, bidali xehetasunak administratzaileari.",
-  "potigy_credit": "Potigyrentzat babestua · Techaroren Anubis bidezko egiaztapena",
   "error_next_action": "Sarbideak huts egiten jarraitzen badu, bidali xehetasun hauek administratzaileari.",
   "imprint_label": "Webgunearen informazioa",
   "benchmark_average": "Abiadura",
   "benchmark_running": "Potigy · Anubis kalkulu-proba",
   "benchmark_change": "Alderatu:",
-  "benchmark_failure": "Sarbide-kalkulua ez da amaitu. Kargatu orria berriro saiatzeko. Errorea errepikatzen bada, bidali xehetasunak administratzaileari."
+  "benchmark_failure": "Sarbide-kalkulua ez da amaitu. Kargatu orria berriro saiatzeko. Errorea errepikatzen bada, bidali xehetasunak administratzaileari.",
+  "developed_by": "Garatzaileak:",
+  "credit_and": "eta"
 }

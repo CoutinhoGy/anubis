@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Nawawala ang kinakailangang X-Forwarded-* na mga header. Kung hindi pa rin makapasok, ipadala ang mga detalyeng ito sa tagapangasiwa ng site.",
   "simplified_explanation": "Gumagamit ang Potigy ng Anubis upang limitahan ang mga awtomatikong kahilingan. Gumagawa ng kalkulasyon ang browser bago ang pag-access. Tinatantiya ng bar ang pag-usad mula sa mga pagtatangka; hindi nito sinusukat ang natitirang gawain. Panatilihing bukas ang pahina.",
   "script_load_error": "Hindi natapos ang pagkalkula para sa pag-access. I-reload upang subukan muli. Kung maulit ang error, ipadala ang mga detalye sa tagapangasiwa ng site.",
-  "potigy_credit": "Protektado para sa Potigy · Pagsusuri ng Anubis mula sa Techaro",
   "error_next_action": "Kung hindi pa rin makapasok, ipadala ang mga detalyeng ito sa tagapangasiwa ng site.",
   "imprint_label": "Impormasyon ng site",
   "benchmark_average": "Bilis:",
   "benchmark_running": "Potigy · Pagsubok sa pagkalkula ng Anubis",
   "benchmark_change": "Kumpara:",
-  "benchmark_failure": "Hindi natapos ang pagkalkula para sa pag-access. I-reload upang subukan muli. Kung maulit ang error, ipadala ang mga detalye sa tagapangasiwa ng site."
+  "benchmark_failure": "Hindi natapos ang pagkalkula para sa pag-access. I-reload upang subukan muli. Kung maulit ang error, ipadala ang mga detalye sa tagapangasiwa ng site.",
+  "developed_by": "Binuo nina",
+  "credit_and": "at"
 }

@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Gerekli X-Forwarded-* başlıkları eksik. Erişim hâlâ başarısızsa bu hata ayrıntılarını site yöneticisine gönderin.",
   "simplified_explanation": "Potigy, otomatik istekleri sınırlamak için Anubis kullanır. Tarayıcınız erişimden önce bir hesaplama yapar. Çubuk, hesaplama denemelerine göre ilerlemeyi tahmin eder; kalan işi ölçmez. Bu sayfayı açık tutun.",
   "script_load_error": "Erişim hesaplaması tamamlanamadı. Yeniden denemek için sayfayı yükleyin. Hata tekrarlanırsa ayrıntıları site yöneticisine gönderin.",
-  "potigy_credit": "Potigy için koruma · Techaro’dan Anubis denetimi",
   "error_next_action": "Erişim hâlâ başarısızsa bu hata ayrıntılarını site yöneticisine gönderin.",
   "imprint_label": "Site bilgileri",
   "benchmark_average": "Hız:",
   "benchmark_running": "Potigy · Anubis hesaplama testi",
   "benchmark_change": "Karşılaştır:",
-  "benchmark_failure": "Erişim hesaplaması tamamlanamadı. Yeniden denemek için sayfayı yükleyin. Hata tekrarlanırsa ayrıntıları site yöneticisine gönderin."
+  "benchmark_failure": "Erişim hesaplaması tamamlanamadı. Yeniden denemek için sayfayı yükleyin. Hata tekrarlanırsa ayrıntıları site yöneticisine gönderin.",
+  "developed_by": "Geliştirenler:",
+  "credit_and": "ve"
 }

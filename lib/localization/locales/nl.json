@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Ontbrekende vereiste X-Forwarded-* headers. Stuur deze foutgegevens naar het sitebeheer als toegang blijft mislukken.",
   "simplified_explanation": "Potigy gebruikt Anubis om geautomatiseerde verzoeken te beperken. Je browser voert voor toegang een berekening uit. De balk schat de voortgang op basis van rekenpogingen; hij meet niet het resterende werk. Houd deze pagina open.",
   "script_load_error": "De toegangsberekening is niet voltooid. Laad opnieuw om het nog eens te proberen. Stuur bij een nieuwe fout de foutgegevens naar het sitebeheer.",
-  "potigy_credit": "Beschermd voor Potigy · Controle door Anubis van Techaro",
   "error_next_action": "Stuur deze foutgegevens naar het sitebeheer als toegang blijft mislukken.",
   "imprint_label": "Website-informatie",
   "benchmark_average": "Snelheid:",
   "benchmark_running": "Potigy · Anubis-rekentest",
   "benchmark_change": "Vergelijken:",
-  "benchmark_failure": "De toegangsberekening is niet voltooid. Laad opnieuw om het nog eens te proberen. Stuur bij een nieuwe fout de foutgegevens naar het sitebeheer."
+  "benchmark_failure": "De toegangsberekening is niet voltooid. Laad opnieuw om het nog eens te proberen. Stuur bij een nieuwe fout de foutgegevens naar het sitebeheer.",
+  "developed_by": "Ontwikkeld door",
+  "credit_and": "en"
 }

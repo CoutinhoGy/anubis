@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "缺少必要的 X-Forwarded-* 头. 如果仍无法访问，请将这些错误详情发送给网站管理员。",
   "simplified_explanation": "Potigy 使用 Anubis 限制自动化请求。浏览器会在访问前执行计算。进度条根据计算尝试估计进展，并不衡量剩余工作量。请保持此页面打开。",
   "script_load_error": "访问计算未能完成。请重新加载后再试。如果再次失败，请将错误详情发送给网站管理员。",
-  "potigy_credit": "为 Potigy 提供保护 · 由 Techaro 的 Anubis 提供验证",
   "error_next_action": "如果仍无法访问，请将这些错误详情发送给网站管理员。",
   "imprint_label": "网站信息",
   "benchmark_average": "速度：",
   "benchmark_running": "Potigy · Anubis 计算测试",
   "benchmark_change": "比较：",
-  "benchmark_failure": "访问计算未能完成。请重新加载后再试。如果再次失败，请将错误详情发送给网站管理员。"
+  "benchmark_failure": "访问计算未能完成。请重新加载后再试。如果再次失败，请将错误详情发送给网站管理员。",
+  "developed_by": "开发者：",
+  "credit_and": "和"
 }

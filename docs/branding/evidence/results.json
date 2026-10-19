@@ -37,6 +37,16 @@
       "pass": true
     },
     {
+      "name": "Plain HTTP 401 pt-BR",
+      "pass": true,
+      "status": 401
+    },
+    {
+      "name": "Plain HTTP 401 en",
+      "pass": true,
+      "status": 401
+    },
+    {
       "name": "Real challenge pt-BR",
       "pass": true
     },
@@ -52,6 +62,10 @@
     {
       "name": "Error page en",
       "status": 400,
+      "pass": true
+    },
+    {
+      "name": "Client error without mascot or image fetch",
       "pass": true
     },
     {

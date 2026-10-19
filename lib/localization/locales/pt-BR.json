@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Faltam os cabeçalhos X-Forwarded-* obrigatórios. Se o acesso continuar falhando, envie estes detalhes do erro à administração do site.",
   "simplified_explanation": "A Potigy usa o Anubis para limitar acessos automatizados. Seu navegador faz um cálculo antes de liberar o acesso. A barra estima o avanço pelas tentativas de cálculo; ela não mede quanto trabalho falta. Mantenha esta página aberta enquanto o cálculo acontece.",
   "script_load_error": "O cálculo de acesso não terminou. Recarregue esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site.",
-  "potigy_credit": "Protegido para a Potigy · Desafio por Anubis, de Techaro",
   "error_next_action": "Se o acesso continuar falhando, envie estes detalhes do erro à administração do site.",
   "imprint_label": "Informações do site",
   "benchmark_average": "Velocidade:",
   "benchmark_running": "Potigy · Teste de cálculo do Anubis",
   "benchmark_change": "Comparar:",
-  "benchmark_failure": "O cálculo de acesso não terminou. Recarregue esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site."
+  "benchmark_failure": "O cálculo de acesso não terminou. Recarregue esta página para tentar de novo. Se a falha se repetir, envie os detalhes do erro à administração do site.",
+  "developed_by": "Desenvolvido por",
+  "credit_and": "e"
 }

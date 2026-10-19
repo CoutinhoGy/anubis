@@ -56,6 +56,12 @@ try {
   const botHeaders={'User-Agent':'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)','X-Real-IP':'2001:4860:4801:10::123'};
   for(const url of [base,old]) assert.match(await(await fetch(url+'/',{headers:botHeaders})).text(),/proof-target/);
   log('Googlebot verified range',{pass:true});
+  for(const lang of ['pt-BR','en']) {
+    const headers={'User-Agent':ua,'Accept':'application/json','Accept-Language':lang};
+    const a=await fetch(base+'/.within.website/x/cmd/anubis/api/check',{headers}),b=await fetch(old+'/.within.website/x/cmd/anubis/api/check',{headers});
+    assert.equal(a.status,401);assert.equal(a.status,b.status);assert.equal(await a.text(),await b.text());
+    log(`Plain HTTP 401 ${lang}`,{pass:true,status:a.status});
+  }
   browser=await chromium.launch({headless:true,channel:process.env.POTIGY_BROWSER_CHANNEL||'chrome'});
   for(const lang of ['pt-BR','en']) {
     for(const route of ['/','/login']) {
@@ -68,7 +74,9 @@ try {
       const expected=lang==='en'?'Before opening Potigy':'Antes de abrir a Potigy';
       assert.equal(await page.locator('h1').innerText(),expected);
       assert.equal(await page.locator('#status').getAttribute('aria-live'),'polite');
-      assert.ok(await page.locator('#image').evaluate(e=>e.getBoundingClientRect().width<=28), 'Mascot must remain a small footer credit');
+      assert.equal(await page.locator('img').count(),0, 'No mascot image may be rendered');
+      assert.equal(await page.locator('footer p').count(),1);
+      assert.equal(await page.locator('footer').innerText(),lang==='en'?'Developed by Techaro and CELPHASE':'Desenvolvido por Techaro e CELPHASE');
       assert.ok(await page.locator('.potigy-brand').evaluate(e=>e.getBoundingClientRect().height>=60), 'Potigy is the visual focus');
       await page.screenshot({path:path.join(output,`${lang}-${route==='/'?'home':'login'}.png`),fullPage:true});
       assert.deepEqual(errors,[]);await context.close();
@@ -82,11 +90,19 @@ try {
     const rejected=await errorPage.goto(base+'/.within.website/x/cmd/anubis/api/pass-challenge?id=invalid&response=x&nonce=0');
     assert.ok(rejected.status()>=400);
     for(const text of ['Potigy','Techaro','CELPHASE']) assert.ok((await errorPage.locator('body').innerText()).includes(text));
-    assert.ok(await errorPage.locator('#image').evaluate(e=>e.getBoundingClientRect().width<=28));
+    assert.equal(await errorPage.locator('img').count(),0);
     await errorPage.screenshot({path:path.join(output,`${lang}-error.png`),fullPage:true});
     log(`Error page ${lang}`,{status:rejected.status(),pass:true});await errorContext.close();
   }
-  // Hold only the already-computed redirect to inspect and activate the reading continuation.
+  // Verify the client-error presentation without requesting a mascot asset.
+  const missingContext=await browser.newContext({locale:'en'}),missingPage=await missingContext.newPage();
+  await missingPage.addInitScript(()=>{window.Worker=undefined;});
+  const missingErrors=[],imageRequests=[];
+  missingPage.on('pageerror',e=>missingErrors.push(e.message));missingPage.on('request',r=>{if(r.url().includes('/static/img/'))imageRequests.push(r.url());});
+  await missingPage.goto(base+'/login');await missingPage.locator('#title').filter({hasText:'Web Workers'}).waitFor();
+  assert.deepEqual(missingErrors,[]);assert.deepEqual(imageRequests,[]);assert.equal(await missingPage.locator('img').count(),0);
+  log('Client error without mascot or image fetch',{pass:true});await missingContext.close();
+  // Hold the worker until the explanation is opened, then activate continuation by keyboard.
   const context=await browser.newContext({locale:'pt-BR',reducedMotion:'reduce',viewport:{width:1280,height:900}});
   const page=await context.newPage();
   let release;const gate=new Promise(r=>{release=r;});

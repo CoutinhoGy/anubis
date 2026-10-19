@@ -30,13 +30,18 @@ func TestPotigyErrorCreditsInEveryLocale(t *testing.T) {
 				t.Fatal(err)
 			}
 			body := out.String()
-			for _, text := range []string{"Potigy", "Techaro", "CELPHASE", "proof-code", "potigy-credit", "https://techaro.lol", "https://bsky.app/profile/celphase.bsky.social"} {
+			for _, text := range []string{"Potigy", "Techaro", "CELPHASE", "proof-code", "class=\"credits\"", "https://techaro.lol", "https://bsky.app/profile/celphase.bsky.social"} {
 				if !strings.Contains(body, text) {
 					t.Errorf("missing visible content or attribution: %s", text)
 				}
 			}
-			if strings.Index(body, `class="potigy-credit"`) < strings.Index(body, "celphase.bsky.social") {
-				t.Error("Potigy credit must follow the original creator credits")
+			_, footer, _ := strings.Cut(body, "<footer>")
+			footer, _, _ = strings.Cut(footer, "</footer>")
+			if strings.Count(footer, "<p") != 1 || strings.Count(footer, "Techaro") != 1 || strings.Count(footer, "CELPHASE") != 1 || strings.Contains(footer, "Anubis") {
+				t.Error("Footer must contain only one concise developer credit")
+			}
+			if strings.Contains(body, "<img") {
+				t.Error("Mascot images must not be rendered")
 			}
 		})
 	}

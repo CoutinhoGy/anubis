@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "缺少必要的 X-Forwarded-* 標頭. 如果仍無法存取，請將這些錯誤詳情傳送給網站管理員。",
   "simplified_explanation": "Potigy 使用 Anubis 限制自動化請求。瀏覽器會在存取前執行計算。進度列根據計算嘗試估計進展，並不衡量剩餘工作量。請保持此頁面開啟。",
   "script_load_error": "存取計算未能完成。請重新載入後再試。如果再次失敗，請將錯誤詳情傳送給網站管理員。",
-  "potigy_credit": "為 Potigy 提供保護 · 由 Techaro 的 Anubis 提供驗證",
   "error_next_action": "如果仍無法存取，請將這些錯誤詳情傳送給網站管理員。",
   "imprint_label": "網站資訊",
   "benchmark_average": "速度：",
   "benchmark_running": "Potigy · Anubis 計算測試",
   "benchmark_change": "比較：",
-  "benchmark_failure": "存取計算未能完成。請重新載入後再試。如果再次失敗，請將錯誤詳情傳送給網站管理員。"
+  "benchmark_failure": "存取計算未能完成。請重新載入後再試。如果再次失敗，請將錯誤詳情傳送給網站管理員。",
+  "developed_by": "開發者：",
+  "credit_and": "與"
 }

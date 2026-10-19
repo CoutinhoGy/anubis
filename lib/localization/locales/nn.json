@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy kunne ikkje opne denne sida",
   "js_calculation_error_msg": "Tilgangsutrekninga vart ikkje fullført. Last på nytt for å prøve igjen. Send feildetaljane til administratoren om feilen kjem att.",
   "script_load_error": "Tilgangsutrekninga vart ikkje fullført. Last på nytt for å prøve igjen. Send feildetaljane til administratoren om feilen kjem att.",
-  "potigy_credit": "Verna for Potigy · Kontroll av Anubis frå Techaro",
   "error_next_action": "Send desse feildetaljane til administratoren dersom tilgangen framleis feilar.",
   "imprint_label": "Nettstadsinformasjon",
   "benchmark_average": "Snøggleik:",
   "benchmark_running": "Potigy · Anubis-utrekningstest",
   "benchmark_change": "Jamfør:",
-  "benchmark_failure": "Tilgangsutrekninga vart ikkje fullført. Last på nytt for å prøve igjen. Send feildetaljane til administratoren om feilen kjem att."
+  "benchmark_failure": "Tilgangsutrekninga vart ikkje fullført. Last på nytt for å prøve igjen. Send feildetaljane til administratoren om feilen kjem att.",
+  "developed_by": "Utvikla av",
+  "credit_and": "og"
 }

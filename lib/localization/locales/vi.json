@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy không thể mở trang này",
   "js_calculation_error_msg": "Phép tính truy cập chưa hoàn tất. Tải lại để thử lần nữa. Nếu lỗi lặp lại, gửi chi tiết lỗi cho quản trị trang.",
   "script_load_error": "Phép tính truy cập chưa hoàn tất. Tải lại để thử lần nữa. Nếu lỗi lặp lại, gửi chi tiết lỗi cho quản trị trang.",
-  "potigy_credit": "Bảo vệ cho Potigy · Thử thách bằng Anubis của Techaro",
   "error_next_action": "Nếu vẫn không truy cập được, gửi các chi tiết lỗi này cho quản trị trang.",
   "imprint_label": "Thông tin trang web",
   "benchmark_average": "Tốc độ:",
   "benchmark_running": "Potigy · Thử nghiệm phép tính Anubis",
   "benchmark_change": "So sánh:",
-  "benchmark_failure": "Phép tính truy cập chưa hoàn tất. Tải lại để thử lần nữa. Nếu lỗi lặp lại, gửi chi tiết lỗi cho quản trị trang."
+  "benchmark_failure": "Phép tính truy cập chưa hoàn tất. Tải lại để thử lần nữa. Nếu lỗi lặp lại, gửi chi tiết lỗi cho quản trị trang.",
+  "developed_by": "Phát triển bởi",
+  "credit_and": "và"
 }

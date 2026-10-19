@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy nie mogło otworzyć tej strony",
   "js_calculation_error_msg": "Obliczenie dostępu nie zostało ukończone. Odśwież stronę, aby spróbować ponownie. Jeśli błąd powróci, wyślij jego szczegóły administratorowi.",
   "script_load_error": "Obliczenie dostępu nie zostało ukończone. Odśwież stronę, aby spróbować ponownie. Jeśli błąd powróci, wyślij jego szczegóły administratorowi.",
-  "potigy_credit": "Ochrona dla Potigy · Weryfikacja przez Anubis od Techaro",
   "error_next_action": "Jeśli dostęp nadal nie działa, wyślij te szczegóły administratorowi strony.",
   "imprint_label": "Informacje o stronie",
   "benchmark_average": "Prędkość:",
   "benchmark_running": "Potigy · Test obliczeniowy Anubisa",
   "benchmark_change": "Porównaj:",
-  "benchmark_failure": "Obliczenie dostępu nie zostało ukończone. Odśwież stronę, aby spróbować ponownie. Jeśli błąd powróci, wyślij jego szczegóły administratorowi."
+  "benchmark_failure": "Obliczenie dostępu nie zostało ukończone. Odśwież stronę, aby spróbować ponownie. Jeśli błąd powróci, wyślij jego szczegóły administratorowi.",
+  "developed_by": "Opracowane przez",
+  "credit_and": "i"
 }

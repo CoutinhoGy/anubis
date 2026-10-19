@@ -61,11 +61,12 @@
   "missing_required_forwarded_headers": "Puuduvad nõutud X-Forwarded-* päised. Kui juurdepääs ikka ei õnnestu, saada see veateave saidi haldajale.",
   "simplified_explanation": "Potigy piirab automaatpäringuid Anubise abil. Brauser teeb enne juurdepääsu arvutuse. Riba hindab edenemist arvutuskatsete põhjal ega mõõda järelejäänud tööd. Hoia leht avatuna.",
   "script_load_error": "Juurdepääsuarvutus ei lõppenud. Proovi leht uuesti laadida. Korduva tõrke korral saada veateave saidi haldajale.",
-  "potigy_credit": "Kaitstud Potigy jaoks · Kontroll Anubiselt, looja Techaro",
   "error_next_action": "Kui juurdepääs ikka ei õnnestu, saada see veateave saidi haldajale.",
   "imprint_label": "Saidi teave",
   "benchmark_average": "Kiirus:",
   "benchmark_running": "Potigy · Anubise arvutustest",
   "benchmark_change": "Võrdle:",
-  "benchmark_failure": "Juurdepääsuarvutus ei lõppenud. Proovi leht uuesti laadida. Korduva tõrke korral saada veateave saidi haldajale."
+  "benchmark_failure": "Juurdepääsuarvutus ei lõppenud. Proovi leht uuesti laadida. Korduva tõrke korral saada veateave saidi haldajale.",
+  "developed_by": "Arendajad",
+  "credit_and": "ja"
 }

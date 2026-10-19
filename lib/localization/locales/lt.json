@@ -61,11 +61,12 @@
   "js_calculation_error": "Potigy nepavyko atverti šio puslapio",
   "js_calculation_error_msg": "Prieigos skaičiavimas nebaigtas. Įkelkite puslapį iš naujo. Jei klaida kartojasi, nusiųskite jos duomenis administratoriui.",
   "script_load_error": "Prieigos skaičiavimas nebaigtas. Įkelkite puslapį iš naujo. Jei klaida kartojasi, nusiųskite jos duomenis administratoriui.",
-  "potigy_credit": "Apsauga Potigy · Anubis patikra iš Techaro",
   "error_next_action": "Jei prieiga vis dar neveikia, nusiųskite šiuos duomenis administratoriui.",
   "imprint_label": "Svetainės informacija",
   "benchmark_average": "Sparta:",
   "benchmark_running": "Potigy · Anubis skaičiavimo testas",
   "benchmark_change": "Palyginti:",
-  "benchmark_failure": "Prieigos skaičiavimas nebaigtas. Įkelkite puslapį iš naujo. Jei klaida kartojasi, nusiųskite jos duomenis administratoriui."
+  "benchmark_failure": "Prieigos skaičiavimas nebaigtas. Įkelkite puslapį iš naujo. Jei klaida kartojasi, nusiųskite jos duomenis administratoriui.",
+  "developed_by": "Sukūrė",
+  "credit_and": "ir"
 }

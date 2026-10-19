@@ -8,7 +8,7 @@ import (
 templ page(redir, challenge string, difficulty int, loc *localization.SimpleLocalizer) {
 	<div class="centered-div challenge-content">
 		<div id="app">
-			<img id="image" alt="Anubis · CELPHASE" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version }/>
+			<span id="image" hidden aria-hidden="true"></span>
 			<p id="status" aria-live="polite" aria-atomic="true">{ loc.T("loading") }</p>
 			<p>{ loc.T("connection_security") }</p>
 		</div>
