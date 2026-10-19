@@ -20,44 +20,6 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 			for key, value := range ogTags {
 				<meta property={ key } content={ value }/>
 			}
-			<style>
-        body,
-        html {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .centered-div {
-            text-align: center;
-        }
-
-        #status {
-            font-variant-numeric: tabular-nums;
-        }
-
-        #progress {
-            display: none;
-            width: 90%;
-            width: min(20rem, 90%);
-            height: 2rem;
-            border-radius: 1rem;
-            overflow: hidden;
-            margin: 1rem 0 2rem;
-            outline-offset: 2px;
-            outline: #b16286 solid 4px;
-        }
-
-        .bar-inner {
-            background-color: #b16286;
-            height: 100%;
-            width: 0;
-            transition: width 0.25s ease-in;
-        }
-    	</style>
 			@templ.JSONScript("anubis_version", anubis.Version)
 			@templ.JSONScript("anubis_challenge", challenge)
 			@templ.JSONScript("anubis_base_prefix", anubis.BasePrefix)
@@ -68,7 +30,22 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 				@honeypotLink(anubis.BasePrefix + fmt.Sprintf("%shoneypot/%s/init", anubis.APIPrefix, uuid.NewString()))
 			}
 			<main>
-				<div class="potigy-brand" aria-label="Potigy">Potigy</div>
+				<div class="potigy-brand" aria-label="Potigy">
+<svg viewBox="10 10 100 100" aria-hidden="true" focusable="false">
+<g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none">
+<path d="M60 20.4L79.8 40.2L99.6 60L79.8 79.8L60 99.6L40.2 79.8L20.4 60L40.2 40.2L60 20.4M40.2 40.2L60 60L79.8 79.8M20.4 60L40.2 79.8L60 60L79.8 40.2"/>
+</g>
+<g fill="currentColor">
+<circle cx="60" cy="20.4" r="5"/><circle cx="99.6" cy="60" r="5"/>
+<circle cx="40.2" cy="40.2" r="5"/><circle cx="60" cy="60" r="5"/>
+<circle cx="79.8" cy="79.8" r="5"/><circle cx="20.4" cy="60" r="5"/>
+<circle cx="40.2" cy="79.8" r="5"/><circle cx="60" cy="99.6" r="5"/>
+</g>
+<circle cx="79.8" cy="40.2" r="12" fill="#F1BE49" opacity="0.25"/>
+<circle cx="79.8" cy="40.2" r="8" fill="#F1BE49" stroke="currentColor" stroke-width="2"/>
+</svg>
+<span>Potigy</span>
+</div>
 				<h1 id="title" class="centered-div">{ title }</h1>
 				@body
 				<footer>
