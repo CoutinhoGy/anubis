@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "base": "v1.28.1",
+  "locales": 29,
+  "protectedSources": "unchanged",
+  "mainControlFlow": "unchanged",
+  "mascotFiles": "unchanged",
+  "mascotRendering": "removed",
+  "footer": "single developer credit",
+  "contrast": [
+    {
+      "fg": "#1A2F26",
+      "bg": "#F6F6F2",
+      "ratio": 13.11
+    },
+    {
+      "fg": "#3E564F",
+      "bg": "#F6F6F2",
+      "ratio": 7.32
+    },
+    {
+      "fg": "#3E2A00",
+      "bg": "#F1BE49",
+      "ratio": 7.94
+    },
+    {
+      "fg": "#EBEBEB",
+      "bg": "#0F241A",
+      "ratio": 13.68
+    }
+  ]
+}

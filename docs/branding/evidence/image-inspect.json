@@ -1,0 +1,13 @@
+{
+  "user": "1000",
+  "entrypoint": [
+    "/ko-app/anubis"
+  ],
+  "os": "linux",
+  "architecture": "amd64",
+  "shellFiles": [],
+  "base": "cgr.dev/chainguard/static@sha256:fe55470f22d3259488d9d3739168d8f04da67755f0b69382bc26eda4a7d3d327",
+  "localDigest": "localhost/potigy-anubis-proof@sha256:e5c1046b9f7df4215833c393378ae85f781ee46b2a621a03285300a7c4d3c46c",
+  "tarSha256": "6bc56e708b638f2bc0a6945e4d29d29ce284968ad41a56d31e878d493c6371a3",
+  "published": false
+}

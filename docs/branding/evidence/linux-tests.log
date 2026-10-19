@@ -1,0 +1,52 @@
+?   	github.com/TecharoHQ/anubis	[no test files]
+ok  	github.com/TecharoHQ/anubis/cmd/anubis	0.868s
+?   	github.com/TecharoHQ/anubis/cmd/containerbuild	[no test files]
+ok  	github.com/TecharoHQ/anubis/cmd/robots2policy	(cached)
+?   	github.com/TecharoHQ/anubis/cmd/robots2policy/batch	[no test files]
+ok  	github.com/TecharoHQ/anubis/data	(cached)
+ok  	github.com/TecharoHQ/anubis/decaymap	(cached)
+ok  	github.com/TecharoHQ/anubis/internal	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/actorify	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/bundler	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/cmd/mkmsi	7.437s
+ok  	github.com/TecharoHQ/anubis/internal/dns	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/dnsbl	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/glob	(cached)
+?   	github.com/TecharoHQ/anubis/internal/honeypot	[no test files]
+ok  	github.com/TecharoHQ/anubis/internal/honeypot/naive	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/iplist	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/multifile	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/ogtags	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/servicesid	(cached)
+ok  	github.com/TecharoHQ/anubis/internal/test	0.500s
+ok  	github.com/TecharoHQ/anubis/lib	14.252s
+?   	github.com/TecharoHQ/anubis/lib/challenge	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/challenge/challengepage	0.028s
+ok  	github.com/TecharoHQ/anubis/lib/challenge/challengetest	(cached)
+?   	github.com/TecharoHQ/anubis/lib/challenge/extension	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/challenge/extension/css-load	(cached)
+?   	github.com/TecharoHQ/anubis/lib/challenge/metarefresh	[no test files]
+?   	github.com/TecharoHQ/anubis/lib/challenge/preact	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/challenge/proofofwork	0.050s
+ok  	github.com/TecharoHQ/anubis/lib/challenge/wasm	179.041s
+ok  	github.com/TecharoHQ/anubis/lib/config	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/geoip	(cached)
+?   	github.com/TecharoHQ/anubis/lib/geoip/geoiptest	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/localization	0.119s
+ok  	github.com/TecharoHQ/anubis/lib/metrics	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/policy	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/policy/checker	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/policy/expressions	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/store	(cached)
+?   	github.com/TecharoHQ/anubis/lib/store/all	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/store/bbolt	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/store/memory	(cached)
+ok  	github.com/TecharoHQ/anubis/lib/store/s3api	(cached)
+?   	github.com/TecharoHQ/anubis/lib/store/storetest	[no test files]
+ok  	github.com/TecharoHQ/anubis/lib/store/valkey	(cached)
+?   	github.com/TecharoHQ/anubis/utils/cmd/backoff-retry	[no test files]
+?   	github.com/TecharoHQ/anubis/utils/cmd/iplist2rule	[no test files]
+?   	github.com/TecharoHQ/anubis/utils/cmd/wazero-exec	[no test files]
+ok  	github.com/TecharoHQ/anubis/wasm	3.201s
+ok  	github.com/TecharoHQ/anubis/web	0.157s
+?   	github.com/TecharoHQ/anubis/xess	[no test files]

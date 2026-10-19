@@ -1,0 +1,26 @@
+{
+  "upstream": "v1.28.1",
+  "branch": "potigy/branding",
+  "scope": "local implementation",
+  "footer": "Desenvolvido por Techaro e CELPHASE",
+  "locales": 29,
+  "mascotRendered": false,
+  "checks": {
+    "presentationGuard": "PASS",
+    "windowsTargetedGoTests": "PASS",
+    "linuxGoTests": "PASS; SKIP_INTEGRATION=1",
+    "linuxGoVet": "PASS",
+    "browserAcceptance": "PASS; isolated local ingress and production policy rules",
+    "localImageBuild": "PASS; ko --push=false",
+    "localImageEntrypoint": "PASS; network disabled, keep-id, user 1000:1000"
+  },
+  "published": false,
+  "productionChanged": false,
+  "releaseTagged": false,
+  "pending": [
+    "confirmed remote fork",
+    "owner-selected registry",
+    "stack-specific update acceptance hook",
+    "Oracle backup and authorized VPS acceptance/rollback"
+  ]
+}

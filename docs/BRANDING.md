@@ -209,3 +209,29 @@ e repetir a bateria. Esse rollback de produção permanece pendente.
 A resposta HTTP textual `authorization_required` permanece literalmente igual
 ao upstream em todos os idiomas, por ser parte da resposta de API, e não do
 rodapé/página do desafio. O verificador compara esse valor com a tag original.
+
+## Resultado da implementação local
+
+| Verificação | Resultado |
+|---|---|
+| `node scripts/verificar-branding.mjs` | PASS: 29 catálogos; fontes protegidas e fluxo de cálculo intactos |
+| Testes Go de apresentação, localização e desafios no Windows | PASS |
+| `SKIP_INTEGRATION=1 go test -p 2 ./...` no Linux | PASS; suíte de integração upstream separada não executada |
+| `go vet -p 2 ./...` no Linux | PASS |
+| Navegador real PT/EN | PASS: cálculo, erros, HTTP 401 literal, teclado, foco, reduced-motion, dark/mobile |
+| Crédito único e ausência de imagens | PASS em páginas PT/EN; renderização de erro nos 29 idiomas |
+| ko, tar local, `--push=false` | PASS: base estática original, USER 1000, entrypoint `/ko-app/anubis`, nenhum shell |
+| Execução local em container com keep-id e user 1000:1000 | PASS: entrypoint executado, container removido ao sair |
+
+As provas estão em `docs/branding/evidence/`; `docs/branding/preview.html`
+apresenta PT/EN lado a lado. O tar local está em `var/potigy-anubis-proof.tar`.
+Seu digest local consta em `image-inspect.json` e não representa uma publicação
+em registry. A imagem de prova vem de snapshot sem tag e informa `devel` na CLI;
+o binário Linux de prova informa `v1.28.1-potigy1` pelo ldflag descrito acima.
+Nenhuma versão é exibida na interface.
+
+O teste em container foi apenas do entrypoint, sem rede. A bateria completa
+de navegação usou os processos locais e o ingresso isolado descritos acima;
+não é uma afirmação de aceitação do compose real ou de implantação na VPS.
+Não houve push, publicação, tag de release, alteração de produção ou rollback
+na VPS. A integração e o hook específico da stack continuam pendentes.
