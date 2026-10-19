@@ -18,8 +18,8 @@ permissions:
 
 jobs:
   ko_prod:
-    # Fork publication requires an explicit owner instruction and registry choice.
-    if: github.repository == 'TecharoHQ/anubis'
+    # Owner-authorized fork publication is manual; pushes never publish the fork.
+    if: github.repository == 'TecharoHQ/anubis' || (github.repository == 'CoutinhoGy/anubis' && github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout code
@@ -77,7 +77,13 @@ jobs:
         id: build
         run: |
           npm ci
-          npm run container
+          npm run assets
+          SKIP_INTEGRATION=1 go test ./...
+          go vet ./...
+          if [ "$GITHUB_REPOSITORY" = 'CoutinhoGy/anubis' ]; then
+            node scripts/verificar-branding.mjs
+          fi
+          go run ./cmd/containerbuild
         env:
           DOCKER_REPO: ${{ env.IMAGE }}
           SLOG_LEVEL: debug
