@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19",
+  "repository": "https://github.com/CoutinhoGy/anubis",
+  "branch": "potigy/branding",
+  "sourceCommit": "234035c787e0349259c38de9ad1e04d31b106c81",
+  "workflow": "https://github.com/CoutinhoGy/anubis/actions/runs/39248837254",
+  "workflowConclusion": "success",
+  "image": "ghcr.io/coutinhogy/anubis:potigy-branding",
+  "digest": "sha256:8651d5853bf49e8c5369d7d2252d182994796330133b5832b0ac504396f272b5",
+  "platforms": ["linux/amd64", "linux/arm64"],
+  "anonymousRegistryManifestStatus": 200,
+  "checks": {
+    "upstreamAssetsBuild": "PASS",
+    "goTests": "PASS; SKIP_INTEGRATION=1",
+    "goVet": "PASS",
+    "presentationGuard": "PASS",
+    "koPublish": "PASS",
+    "buildProvenanceAttestation": "PASS",
+    "localPullByDigest": "PASS; isolated local WSL storage",
+    "publishedImageEntrypoint": "PASS; keep-id, user 1000:1000, network disabled"
+  },
+  "imageUser": "1000",
+  "entrypoint": ["/ko-app/anubis"],
+  "candidateCliVersion": "v1.28.2-0.20261019120059-234035c787e0+dirty",
+  "releaseTagged": false,
+  "productionChanged": false,
+  "deploymentGate": {
+    "backupService": "potigy-backup-pg.service",
+    "finishedAt": "2026-10-19T03:22:44Z",
+    "result": "exit-code",
+    "exitCode": 1,
+    "oracleError": "StorageLimitExceeded",
+    "decision": "Hold deployment until Oracle backup succeeds; no backups deleted."
+  }
+}

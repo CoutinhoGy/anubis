@@ -3,10 +3,11 @@
 ## Base e limites
 
 Base: tag `v1.28.1`, commit `da1270fcb927e2feac922711f7a5ce54b6a09ef5`.
-Branch local: `potigy/branding`. Destino previsto: `v1.28.1-potigy1`.
-O fork remoto e o registry ainda não foram definidos/confirmados. Nenhum push,
-publicação de imagem, compose, Caddy, Vault ou serviço de produção faz parte
-da implementação local. A licença desta tag é MIT; LICENSE e atribuições são preservados.
+Branch: `potigy/branding`. Release prevista: `v1.28.1-potigy1`.
+Fork público: https://github.com/CoutinhoGy/anubis. Registry escolhido após
+autorização do dono: `ghcr.io/coutinhogy/anubis`. O código está publicado;
+a publicação manual da imagem é acompanhada separadamente da implantação.
+A licença desta tag é MIT; LICENSE e atribuições são preservados.
 
 ## Inventário anterior ao branding
 
@@ -189,14 +190,17 @@ O hook é específico da stack do operador e ainda precisa ser fornecido/configu
 ausência de hook ou prova não passa silenciosamente. A tag local só nasce após
 todos os gates; o script nunca publica, dá push ou modifica a VPS.
 
-Os workflows upstream que publicariam imagem em push/PR estão bloqueados no
-fork por condição de repositório. O sistema de build e `.ko.yaml` continuam iguais.
-Publicação autorizada futuramente exige um fluxo manual com destino explícito.
+Os workflows que publicariam imagem em push/PR estão bloqueados no fork.
+Após autorização do dono em 19/10/2026, `docker.yml` permite execução manual
+somente em `CoutinhoGy/anubis`, com destino `ghcr.io/coutinhogy/anubis`.
+O build continua usando assets e containerbuild/ko upstream, configuração
+`.ko.yaml`, base estática e USER 1000; testes Go, vet e guarda precedem o push.
+Uma imagem candidata não equivale à tag de release aceita nem à implantação.
 
 ## Integração e reversão na VPS: pendentes
 
 Não foram alterados compose, Caddy, policy, Vault, secrets ou sync-docs do Potigy.
-Faltam o fork remoto confirmado e o registry escolhido pelo dono. Antes de
+Fork e registry foram definidos e o código enviado. Antes de
 integrar: comprovar backup Oracle verde, publicar no destino autorizado, registrar
 o digest real e revisar a troca restrita de imagem no compose e do alvo de docs.
 
@@ -233,5 +237,41 @@ Nenhuma versão é exibida na interface.
 O teste em container foi apenas do entrypoint, sem rede. A bateria completa
 de navegação usou os processos locais e o ingresso isolado descritos acima;
 não é uma afirmação de aceitação do compose real ou de implantação na VPS.
-Não houve push, publicação, tag de release, alteração de produção ou rollback
-na VPS. A integração e o hook específico da stack continuam pendentes.
+As provas acima descrevem a implementação local anterior à publicação.
+O código foi enviado ao fork em 19/10/2026. Não houve tag de release, alteração
+de produção ou rollback na VPS. A integração e o hook específico da stack
+continuam pendentes.
+
+## Portão de implantação medido em 19/10/2026
+
+A aferição do backend retornou exit 0. A verificação por SSH, como `potigy`,
+encontrou o container `potigy-anubis` ainda usando a imagem upstream v1.28.1.
+O serviço `potigy-backup-pg.service` terminou em 19/10/2026 às 03:22:44 UTC
+com `Result=exit-code`, `ExecMainStatus=1`. Os uploads à Oracle falharam com
+`StorageLimitExceeded`, inclusive as peças Vault e Stalwart. Portanto, o
+pré-requisito de backup verde não foi atendido: implantação e rollback de
+produção não são executados enquanto essa condição persistir. Nenhum backup
+foi apagado e nenhuma configuração de armazenamento foi alterada.
+
+## Publicação verificada
+
+Workflow https://github.com/CoutinhoGy/anubis/actions/runs/39248837254:
+sucesso no build upstream, testes Go (`SKIP_INTEGRATION=1`), vet, guarda de
+apresentação, publicação ko e atestação de proveniência. Fonte:
+`234035c787e0349259c38de9ad1e04d31b106c81`.
+
+Imagem candidata: `ghcr.io/coutinhogy/anubis:potigy-branding`.
+Referência imutável:
+`ghcr.io/coutinhogy/anubis@sha256:8651d5853bf49e8c5369d7d2252d182994796330133b5832b0ac504396f272b5`.
+O manifesto do registry retornou HTTP 200 com token anônimo, confirmando
+acesso sem login; plataformas publicadas: linux/amd64 e linux/arm64.
+O pull por digest e a execução do entrypoint da imagem publicada passaram
+no Podman local isolado, com keep-id e user 1000:1000, sem rede no container.
+Provas resumidas em `docs/branding/evidence/publication.json`.
+
+O build upstream atribuiu à CLI a pseudoversão
+`v1.28.2-0.20261019120059-234035c787e0+dirty`: ela identifica o commit do
+candidato e a geração de assets, não uma mudança da base v1.28.1 para v1.28.2.
+Não há versão na interface. A tag de release `v1.28.1-potigy1` continua
+reservada à aceitação completa; não foi criada para contornar o portão do
+backup ou a aceitação na VPS.
