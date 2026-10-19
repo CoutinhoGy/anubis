@@ -68,6 +68,7 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 				@honeypotLink(anubis.BasePrefix + fmt.Sprintf("%shoneypot/%s/init", anubis.APIPrefix, uuid.NewString()))
 			}
 			<main>
+				<div class="potigy-brand" aria-label="Potigy">Potigy</div>
 				<h1 id="title" class="centered-div">{ title }</h1>
 				@body
 				<footer>
@@ -78,10 +79,11 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 >Techaro</a>. { localizer.T("made_with") }.
 						</p>
 						<p>{ localizer.T("mascot_design") } <a href="https://bsky.app/profile/celphase.bsky.social">{ localizer.T("celphase") }</a>.</p>
+						<p class="potigy-credit">{ localizer.T("potigy_credit") }</p>
 						if impressum != nil {
 							<p>
 								@templ.Raw(impressum.Footer)
-								-- <a href={ templ.SafeURL(anubis.BasePrefix + fmt.Sprintf("%simprint", anubis.APIPrefix)) }>Imprint</a>
+								<a href={ templ.SafeURL(anubis.BasePrefix + fmt.Sprintf("%simprint", anubis.APIPrefix)) }>{ localizer.T("imprint_label") }</a>
 							</p>
 						}
 						<p>{ localizer.T("version_info") } <code>{ anubis.Version }</code>.</p>
@@ -93,9 +95,10 @@ templ base(title string, body templ.Component, impressum *config.Impressum, hone
 }
 
 templ errorPage(message, mail, code string, localizer *localization.SimpleLocalizer) {
-	<div class="centered-div">
-		<img id="image" alt="Sad Anubis" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/reject.webp?cacheBuster=" + anubis.Version }/>
+	<div class="centered-div challenge-content">
+		<img id="image" alt="Anubis · CELPHASE" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/reject.webp?cacheBuster=" + anubis.Version }/>
 		<p>{ message }.</p>
+		<p>{ localizer.T("error_next_action") }</p>
 		if code != "" {
 			<code><pre>{ code }</pre></code>
 		}
@@ -125,6 +128,12 @@ templ StaticHappy(localizer *localization.SimpleLocalizer) {
 }
 
 templ bench(localizer *localization.SimpleLocalizer) {
+	@templ.JSONScript("potigy_benchmark", map[string]string{
+		"average": localizer.T("benchmark_average"),
+		"running": localizer.T("benchmark_running"),
+		"change": localizer.T("benchmark_change"),
+		"failure": localizer.T("benchmark_failure"),
+	})
 	<div style="height:20rem;display:flex">
 		<table style="margin-top:1rem;display:grid;grid-template:auto 1fr/auto auto;gap:0 0.5rem">
 			<thead
@@ -148,7 +157,7 @@ templ bench(localizer *localization.SimpleLocalizer) {
 		</table>
 		<div class="centered-div">
 			<img id="image" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version }/>
-			<p id="status" style="max-width:256px">{ localizer.T("loading") }</p>
+			<p id="status" aria-live="polite" aria-atomic="true" style="max-width:256px">{ localizer.T("loading") }</p>
 			<script async type="module" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/bench.mjs?cacheBuster=" + anubis.Version }></script>
 			<div id="sparkline"></div>
 			<noscript>

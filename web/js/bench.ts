@@ -1,4 +1,7 @@
 import algorithms from "./algorithms";
+import { j } from "./lib/xeact.mjs";
+
+const benchmarkText = j("potigy_benchmark");
 
 const defaultDifficulty = 4;
 
@@ -79,13 +82,13 @@ const updateStatus = () => {
   const mainRate = stats.iters / stats.time;
   const compareRate = comparison.iters / comparison.time;
   if (Number.isFinite(mainRate)) {
-    status.innerText = `Average hashrate: ${mainRate.toFixed(3)}kH/s`;
+    status.innerText = `${benchmarkText.average} ${mainRate.toFixed(3)}kH/s`;
     if (Number.isFinite(compareRate)) {
       const change = ((mainRate - compareRate) / mainRate) * 100;
-      status.innerText += ` vs ${compareRate.toFixed(3)}kH/s (${change.toFixed(2)}% change)`;
+      status.innerText += ` / ${compareRate.toFixed(3)}kH/s (${change.toFixed(2)}% ${benchmarkText.change})`;
     }
   } else {
-    status.innerText = "Benchmarking...";
+    status.innerText = benchmarkText.running;
   }
 };
 
@@ -134,7 +137,7 @@ const benchmarkLoop = async (controller) => {
     }
   } catch (e) {
     if (e !== false) {
-      status.innerText = e;
+      status.innerText = `${benchmarkText.failure} ${e}`;
     }
     return;
   }
