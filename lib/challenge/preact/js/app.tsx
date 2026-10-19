@@ -71,11 +71,11 @@ const App = () => {
   return (
     <>
       {imageURL !== null && (
-        <img src={imageURL} style={{ width: "100%", maxWidth: "256px" }} />
+        <img id="image" alt="Anubis · CELPHASE" src={imageURL} style={{ width: "100%", maxWidth: "256px" }} />
       )}
       {state !== undefined && (
         <>
-          <p id="status">{state.loading_message}</p>
+          <p id="status" aria-live="polite" aria-atomic="true">{state.loading_message}</p>
           <p>{state.connection_security_message}</p>
         </>
       )}
